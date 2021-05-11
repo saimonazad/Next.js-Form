@@ -98,11 +98,11 @@ export default function signup() {
                     <div className="Phone form-group">
                       <label htmlFor="phone">Phone Number</label>
                       <Input
-                        type="tel"
+                        type="number"
                         placeholder="01858 6711 87"
                         {...register("phone", {
                           required: true,
-                          min: 11,
+                          minLength: 11,
                           maxLength: 11
                         })}
                       />
@@ -110,7 +110,10 @@ export default function signup() {
                         <ErrorText>Phone number is required</ErrorText>
                       )}
                       {errors.phone && errors.phone.type === "maxLength" && (
-                        <ErrorText>Max Length is 11</ErrorText>
+                        <ErrorText>Phone number must be 11 digits</ErrorText>
+                      )}
+                      {errors.phone && errors.phone.type === "minLength" && (
+                        <ErrorText>Phone number must be 11 digits</ErrorText>
                       )}
                     </div>
                     <div className="Website form-group">
