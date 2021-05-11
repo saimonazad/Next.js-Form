@@ -1,6 +1,6 @@
-import * as Sentry from "@sentry/browser";
-import getConfig from "next/config";
-import React from "react";
+import * as Sentry from '@sentry/browser';
+import getConfig from 'next/config';
+import React from 'react';
 
 const { SENTRY_DSN } = getConfig().publicRuntimeConfig;
 
