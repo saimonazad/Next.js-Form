@@ -1,6 +1,6 @@
-import device from '../theme/device';
+import device from "../theme/device";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -71,10 +71,10 @@ const FormContainer = styled.div`
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
-        'FirstName LastName'
-        'Email Email'
-        'Phone Website'
-        'Password ReTypePassword';
+        "FirstName LastName"
+        "Email Email"
+        "Phone Website"
+        "Password ReTypePassword";
       grid-gap: 10px 25px;
     }
     .Email {
@@ -117,7 +117,7 @@ const FormContainer = styled.div`
     }
   }
 `;
-const Input = styled.input.attrs({ type: 'text' })`
+const Input = styled.input`
   &:focus {
     outline: none !important;
     border: 1px solid #fb771a;
@@ -138,14 +138,14 @@ const Input = styled.input.attrs({ type: 'text' })`
   line-height: 1.5;
   color: #495057;
 `;
-const SelectedInput = styled.input.attrs({ type: 'checkbox' })`
+const SelectedInput = styled.input.attrs({ type: "checkbox" })`
   position: absolute;
   cursor: pointer;
   width: 0px;
   height: 0px;
 
   &:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     width: 20px;
@@ -155,7 +155,7 @@ const SelectedInput = styled.input.attrs({ type: 'checkbox' })`
     background-color: #e9e9e9;
   }
   &:checked:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     width: 20px;
@@ -165,7 +165,7 @@ const SelectedInput = styled.input.attrs({ type: 'checkbox' })`
     background-color: #fb771a;
   }
   &:checked:after {
-    content: '';
+    content: "";
     display: block;
     width: 5px;
     height: 10px;
@@ -179,7 +179,7 @@ const SelectedInput = styled.input.attrs({ type: 'checkbox' })`
     left: 6px;
   }
 `;
-const SubmitBtn = styled.input.attrs({ type: 'submit' })`
+const SubmitBtn = styled.input.attrs({ type: "submit" })`
   border: none;
   box-sizing: border-box;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
@@ -198,7 +198,7 @@ const SubmitBtn = styled.input.attrs({ type: 'submit' })`
 const ImgContainer = styled.div`
   flex: 1 1 100%;
   order: 1;
-  background-image: url('/bg_signup.jpg');
+  background-image: url("/bg_signup.jpg");
   background-color: #cccccc;
   background-position: center;
   background-repeat: no-repeat;
@@ -216,4 +216,12 @@ const ErrorText = styled.p`
   margin: 1rem 0 0;
 `;
 
-export { Wrapper, FormContainer, ImgContainer, ErrorText, SubmitBtn, Input, SelectedInput };
+export {
+  Wrapper,
+  FormContainer,
+  ImgContainer,
+  ErrorText,
+  SubmitBtn,
+  Input,
+  SelectedInput
+};
